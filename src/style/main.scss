@@ -1,0 +1,19 @@
+@use 'font' as *;
+@use 'var' as *;
+
+body{
+    font-family: $font;
+}
+
+a {
+    transition: $tr;
+    color: $dark;
+    cursor: pointer;
+}
+
+.link:hover{
+    color: $accent;
+}
+a:hover{
+    color: $accent;
+}
