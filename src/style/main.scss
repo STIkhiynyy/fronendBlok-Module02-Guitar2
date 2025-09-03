@@ -3,15 +3,77 @@
 
 body{
     font-family: $font;
+    font-weight: 400;
+}
+
+.header{
+    background-color: $accent;
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 71px;
+    position: relative;
+    &::before{
+        content: '';
+        background-color: $accent;
+        display: block;
+        width: 100%;
+        height: 27px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 24px;
+        bottom: -24px;
+        background-image: url(../images/headerBottom.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    &__logo{
+        background-color: $accent;
+        padding: 17px 45px 0 45px;
+        border-radius: 10px 0 0 0;
+        position: relative;
+        $::after{
+            content: '';
+            display: block;
+            width: 71px;
+            height: 71px;
+            background-image: url(../images/headerLeft.svg);
+            position: absolute;
+            right: -71px;
+            top: 0;
+        }
+    }
+    &__link{
+        color: $light;
+        font-size: 20px;
+        background-color: $accent;
+        padding: 17px 45px 0 45px;
+        border-radius: 0 10px 0 0;
+    }
+}
+
+
+
+
+
+
+.header{
+    
+    
 }
 
 a {
-    transition: $tr;
-    color: $dark;
-    cursor: pointer;
+    color: $light;
+    text-decoration: none;
 }
 
-.link:hover{
-    color: $accent;
-}
 
