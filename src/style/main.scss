@@ -4,6 +4,12 @@
 body{
     font-family: $font;
     font-weight: 400;
+    background-color: 1F2023;
+}
+
+a {
+    color: $light;
+    text-decoration: none;
 }
 
 .header{
@@ -41,7 +47,19 @@ body{
         padding: 17px 45px 0 45px;
         border-radius: 10px 0 0 0;
         position: relative;
-        $::after{
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            bottom: -24px;
+            background-image: url(../images/headerBottomLeft.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            left: 0;
+        }
+        &::after{
             content: '';
             display: block;
             width: 71px;
@@ -58,22 +76,43 @@ body{
         background-color: $accent;
         padding: 17px 45px 0 45px;
         border-radius: 0 10px 0 0;
+        &::after{
+            content: '';
+            display: block;
+            width: 71px;
+            height: 71px;
+            background-image: url(../images/headerRight.svg);
+            position: absolute;
+            left: -71px;
+            top: 0;
+        }
+            &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            bottom: -24px;
+            background-image: url(../images/headerBottomRight.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            right: 0;
+        }
     }
 }
 
-
-
-
-
-
-.header{
-    
-    
+.container{
+    width: 100%;
+    max-width: 1830px;
+    margin: 0 auto; //по центру
+    padding-left: 15px;
+    padding-right: 15px;
 }
-
-a {
-    color: $light;
-    text-decoration: none;
+.banner{
+    display: flex;
+    background-image: url('../images/bg_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
 }
-
 
