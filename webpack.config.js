@@ -39,13 +39,13 @@ module.exports = ({develop}) => ({
             {
                 test: /\.css$/i,
                 use: [
-                  HtmlWebpackPlugin.loader, 'css-loader'
+                  MiniCssExtractPlugin.loader, 'css-loader'
                 ]
             },
             {
                 test: /\.scss$/i,
                 use: [
-                  HtmlWebpackPlugin.loader, 'css-loader', 'sass-loader'
+                  MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
                 ]
             },
             {
